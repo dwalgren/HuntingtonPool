@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Huntington Swim Tennis Club Naperville Illinois" />
+    <meta name="keywords" content="Huntington,Swim,Swimming,Tennis,SwimTeam,Barracudas,Volleyball,Social,Chicago,Huntington Commons,Century Hill,Naperville,Illinois,IL,60540,Pool" />
+    <meta name="author" content="Doug Walgren" />
+    <title>Huntington Swim &amp; Tennis Club</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span style="color:#ffd800;">Menu</span>
+                </button>
+                @Html.ActionLink("Huntington Pool", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <!--li>@Html.ActionLink("Calendar", "Calendar", "Home")</li-->
+                    <li>@Html.ActionLink("Documents", "Documents", "Home")</li>
+                    <li>@Html.ActionLink("Membership", "Membership", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li><a href="http://www.huntingtonbarracudas.org" target="_blank">Barracudas Swim Team &raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Huntington Swim &amp; Tennis Club, 1400 E. Chicago Ave, Naperville, IL</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
